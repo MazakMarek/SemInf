@@ -9,7 +9,7 @@ public class KartaTahajDve extends AkcnaKarta {
 
     @Override
     public void hraj() {
-        this.hra.tahaj(this.hra.getDalsiHrac(),2);
+        this.hra.tahaj(this.hra.getDalsiHrac(), 2);
         this.hra.posunPoradieDopredu(1);
     }
 
