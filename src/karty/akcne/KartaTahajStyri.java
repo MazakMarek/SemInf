@@ -1,8 +1,15 @@
+package karty.akcne;
+
+import hra.Balicek;
+import hra.Hra;
+import karty.Farba;
+import karty.Hodnota;
+
 public class KartaTahajStyri extends AkcnaKarta {
 
     public KartaTahajStyri(Hra hra, Balicek balicek) {
 
-        super(null, Hodnota.AKCNA, hra, balicek);
+        super(Farba.ZIADNA, Hodnota.AKCNA, hra, balicek);
     }
 
     @Override
@@ -15,15 +22,12 @@ public class KartaTahajStyri extends AkcnaKarta {
     @Override
     public boolean mozemPolozit() {
 
-        return true;
+        return super.mozemPolozit();
     }
 
     @Override
     public String toString() {
-        String vystup = super.toString() + " Tahaj styri";
-        if (super.getFarba() != Farba.ZIADNA) {
-            vystup += super.getFarba();
-        }
-        return vystup;
+
+        return super.toString() + " Tahaj styri";
     }
 }

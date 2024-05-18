@@ -1,7 +1,12 @@
+package karty.akcne;
+
+import hra.Balicek;
+import hra.Hra;
+import karty.Farba;
+import karty.Hodnota;
+
 public class KartaZmenFarbu extends AkcnaKarta {
 
-    private Hra hra;
-    private Balicek balicek;
     public KartaZmenFarbu(Hra hra, Balicek balicek) {
 
         super(Farba.ZIADNA, Hodnota.AKCNA, hra, balicek);
@@ -10,13 +15,13 @@ public class KartaZmenFarbu extends AkcnaKarta {
     @Override
     public void hraj() {
 
-        this.setFarbu(this.hra.getKonzolovaKomunikacia().vyberFarbu());
+        this.setFarbu(super.getHra().getKonzolovaKomunikacia().vyberFarbu());
     }
 
     @Override
     public boolean mozemPolozit() {
 
-        return true;
+        return super.mozemPolozit();
     }
 
     @Override

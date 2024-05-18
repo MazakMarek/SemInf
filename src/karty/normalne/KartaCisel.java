@@ -1,11 +1,18 @@
+package karty.normalne;
+
+import hra.Balicek;
+import hra.Hra;
+import karty.Farba;
+import karty.Hodnota;
+import karty.Karta;
+
 public class KartaCisel extends Karta {
 
-    private Hra hra;
-    private Balicek balicek;
+
 
     public KartaCisel(Farba farba, Hodnota hodnota, Hra hra, Balicek balicek) {
         super(farba, hodnota, hra, balicek);
-        this.balicek = balicek;
+
     }
 
     @Override
@@ -18,8 +25,8 @@ public class KartaCisel extends Karta {
     @Override
     public boolean mozemPolozit() {
         return super.getBalicek().poslednePouzitaKarta().getFarba() == this.getFarba() ||
-                (this.balicek.poslednePouzitaKarta().getHodnota() == this.getHodnota() ||
-                        this.balicek.poslednePouzitaKarta().getHodnota() == Hodnota.AKCNA);
+                (super.getBalicek().poslednePouzitaKarta().getHodnota() == this.getHodnota() ||
+                        super.getBalicek().poslednePouzitaKarta().getHodnota() == Hodnota.AKCNA);
     }
 
     @Override

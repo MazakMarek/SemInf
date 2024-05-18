@@ -1,3 +1,8 @@
+package karty;
+
+import hra.Balicek;
+import hra.Hra;
+
 public class Karta {
     private Hra hra;
     private Balicek balicek;
@@ -25,7 +30,7 @@ public class Karta {
     @Override
     public String toString() {
         if (this.hodnota == Hodnota.AKCNA) {
-            return "Akcna karta";
+            return "Akcna karta ";
         } else {
             return this.hodnota.getValue().toString();
         }

@@ -1,10 +1,18 @@
+package ui;
+
+import hra.Balicek;
+import hra.Hrac;
+import karty.Farba;
+import karty.Karta;
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
 
 public class KonzolovaKomunikacia {
 
-    private Scanner skener;
+    private final Scanner skener;
 
     public KonzolovaKomunikacia() {
 
@@ -21,7 +29,7 @@ public class KonzolovaKomunikacia {
     }
 
     public void vypisBalicek(Balicek balicek) {
-        System.out.println("Balicek");
+        System.out.println("hra.Balicek");
         System.out.println("V balicku ostava:" + balicek.getPocetZostavajucichKariet() + "kariet");
         System.out.println("Posledna polozena karta je: " + balicek.poslednePouzitaKarta());
     }
@@ -31,7 +39,7 @@ public class KonzolovaKomunikacia {
         for (int i = 0; i < hraci.size(); i++) {
             if (i != indexHracaNaRade) {
                 ArrayList<Karta> kartyHraca = hraci.get(i).getKartyNaRuke();
-                System.out.println("Hrac: " + hraci.get(i).getMeno());
+                System.out.println("hra.Hrac: " + hraci.get(i).getMeno());
                 System.out.println("Karty:");
                 for (int j = 0; j < kartyHraca.size(); j++) {
                     System.out.print("*");
@@ -40,7 +48,7 @@ public class KonzolovaKomunikacia {
             }
         }
 
-        System.out.println("Hrac: " + hraci.get(indexHracaNaRade).getMeno());
+        System.out.println("hra.Hrac: " + hraci.get(indexHracaNaRade).getMeno());
         System.out.println("karty: ");
         ArrayList<Karta> kartyHracaNaRuke = hraci.get(indexHracaNaRade).getKartyNaRuke();
         for (int i = 0; i < kartyHracaNaRuke.size(); i++) {

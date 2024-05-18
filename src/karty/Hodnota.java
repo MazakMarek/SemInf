@@ -1,3 +1,5 @@
+package karty;
+
 public enum Hodnota {
     NULA(0),
     JEDNA(1),

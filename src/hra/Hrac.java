@@ -1,3 +1,7 @@
+package hra;
+
+import karty.Karta;
+
 import java.util.ArrayList;
 
 public class Hrac {

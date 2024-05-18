@@ -1,3 +1,7 @@
+package hra;
+
+import ui.KonzolovaKomunikacia;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,11 +50,12 @@ public class Hra {
                     this.balicek.pridajKartuDoKopy(hracNaTahu.zahrajKartu(indexVybratejKarty));
                     chybaPriHre = false;
                 } else {
-                    this.konzolovaKomunikacia.vypisChybuPriPokladani("Karta sa neda polozit");
+                    this.konzolovaKomunikacia.vypisChybuPriPokladani("karty.Karta sa neda polozit");
                 }
             }
             this.posunPoradieDopredu(1);
             this.hracVyhral(hracNaTahu);
+            //TODO upravit aby to mazalo obrazovku po tahu
             this.clearScreen();
         }
     }

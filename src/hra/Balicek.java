@@ -1,3 +1,16 @@
+package hra;
+
+import karty.Farba;
+import karty.Hodnota;
+import karty.Karta;
+import karty.akcne.KartaStoj;
+import karty.akcne.KartaZmenSmer;
+import karty.akcne.KartaTahajDve;
+import karty.akcne.KartaTahajStyri;
+import karty.akcne.KartaZmenFarbu;
+
+import karty.normalne.KartaCisel;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -33,7 +46,7 @@ public class Balicek {
                 this.karty.add(new KartaTahajDve(farba, this.hra, this));
             }
         }
-        //vytvori akcne karty kt nemaju farbu
+        //vytvori karty.akcne karty kt nemaju farbu
         for (int i = 0; i < 4; i++) {
             this.karty.add(new KartaZmenFarbu(this.hra, this));
             this.karty.add(new KartaTahajStyri(this.hra, this));
