@@ -21,7 +21,7 @@ public class KartaZmenFarbu extends AkcnaKarta {
     @Override
     public boolean mozemPolozit() {
 
-        return super.mozemPolozit();
+        return true;
     }
 
     @Override

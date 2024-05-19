@@ -9,7 +9,7 @@ import karty.Karta;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
-
+// TODO urobit singleton
 public class KonzolovaKomunikacia {
 
     private final Scanner skener;
@@ -29,8 +29,8 @@ public class KonzolovaKomunikacia {
     }
 
     public void vypisBalicek(Balicek balicek) {
-        System.out.println("hra.Balicek");
-        System.out.println("V balicku ostava:" + balicek.getPocetZostavajucichKariet() + "kariet");
+        System.out.println("Balicek");
+        System.out.println("V balicku ostava: " + balicek.getPocetZostavajucichKariet() + " kariet");
         System.out.println("Posledna polozena karta je: " + balicek.poslednePouzitaKarta());
     }
 
@@ -39,7 +39,7 @@ public class KonzolovaKomunikacia {
         for (int i = 0; i < hraci.size(); i++) {
             if (i != indexHracaNaRade) {
                 ArrayList<Karta> kartyHraca = hraci.get(i).getKartyNaRuke();
-                System.out.println("hra.Hrac: " + hraci.get(i).getMeno());
+                System.out.println("Hrac: " + hraci.get(i).getMeno());
                 System.out.println("Karty:");
                 for (int j = 0; j < kartyHraca.size(); j++) {
                     System.out.print("*");
@@ -48,7 +48,7 @@ public class KonzolovaKomunikacia {
             }
         }
 
-        System.out.println("hra.Hrac: " + hraci.get(indexHracaNaRade).getMeno());
+        System.out.println("Hrac: " + hraci.get(indexHracaNaRade).getMeno());
         System.out.println("karty: ");
         ArrayList<Karta> kartyHracaNaRuke = hraci.get(indexHracaNaRade).getKartyNaRuke();
         for (int i = 0; i < kartyHracaNaRuke.size(); i++) {
@@ -85,7 +85,9 @@ public class KonzolovaKomunikacia {
         for (int i = 0; i < Farba.values().length - 1; i++) {
             System.out.print((i + 1) + ". " + Farba.values()[i].name() + " ");
         }
-        return Farba.values()[this.vyberMoznosti(Farba.values().length - 1) - 1 ];
+        int vybrataFarba = this.vyberMoznosti(Farba.values().length - 1) - 1;
+        System.out.println("Zmenena farba na " + Farba.values()[vybrataFarba]);
+        return Farba.values()[vybrataFarba];
     }
 
     public void vypisChybuPriPokladani(String chyba) {

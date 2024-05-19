@@ -21,12 +21,12 @@ public class KartaCisel extends Karta {
         System.out.println("bola zahrata: " + this);
     }
 
-    //TODO skontrolovat logiku nie osm si isty s tretou podmienkou
     @Override
     public boolean mozemPolozit() {
         return super.getBalicek().poslednePouzitaKarta().getFarba() == this.getFarba() ||
                 (super.getBalicek().poslednePouzitaKarta().getHodnota() == this.getHodnota() ||
-                        super.getBalicek().poslednePouzitaKarta().getHodnota() == Hodnota.AKCNA);
+                        (super.getBalicek().poslednePouzitaKarta().getHodnota() == Hodnota.AKCNA &&
+                                super.getBalicek().poslednePouzitaKarta().getFarba() == this.getFarba()));
     }
 
     @Override

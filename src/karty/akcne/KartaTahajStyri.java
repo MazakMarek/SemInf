@@ -22,12 +22,15 @@ public class KartaTahajStyri extends AkcnaKarta {
     @Override
     public boolean mozemPolozit() {
 
-        return super.mozemPolozit();
+        return true;
     }
 
     @Override
     public String toString() {
-
-        return super.toString() + " Tahaj styri";
+        String vystup = super.toString() + " Tahaj styri ";
+        if (super.getFarba() != Farba.ZIADNA) {
+            vystup += super.getFarba();
+        }
+        return vystup;
     }
 }

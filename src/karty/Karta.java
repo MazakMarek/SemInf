@@ -3,7 +3,7 @@ package karty;
 import hra.Balicek;
 import hra.Hra;
 
-public class Karta {
+public abstract class Karta {
     private Hra hra;
     private Balicek balicek;
     private Farba farba;
@@ -36,14 +36,10 @@ public class Karta {
         }
     }
 
-    public boolean mozemPolozit() {
-
-        return true;
-    }
+    public abstract boolean mozemPolozit();
 
     // implementacia polymorfizmu, kazda akcna karta inak implementuje tuto metodu
-    public void hraj() {
-    }
+    public abstract void hraj();
 
     public void setFarbu(Farba novaFarba) {
 
